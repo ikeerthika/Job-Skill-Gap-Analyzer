@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-lkk6(9#zh3pnz^5#jtx=zhkr=eh2s_1mrawmg(^^ccjr$d_xe%
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+
+ALLOWED_HOSTS = ['job-skill-gap-analyzer-5ar9.onrender.com']
 
 
 # Application definition
