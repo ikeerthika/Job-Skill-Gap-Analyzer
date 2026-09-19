@@ -1,0 +1,1159 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>🚀 Job Skill Gap Analyzer</title>
+<link rel="icon" href="{% static 'favicon.ico' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+  
+/* =========================================================
+   JOB GAP PROJECT - PROFESSIONAL UI
+   ========================================================= */
+
+/* ===== GLOBAL ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Inter", "Segoe UI", Tahoma, sans-serif;
+    background: #f5f7fb;
+    color: #1e293b;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4 {
+    margin-bottom: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.hidden {
+    display: none !important;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    width: 250px;
+    height: 100vh;
+
+    padding: 28px 18px;
+
+    background: linear-gradient(
+        180deg,
+        #0f172a 0%,
+        #172554 50%,
+        #1e1b4b 100%
+    );
+
+    color: #ffffff;
+
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 5px 0 25px rgba(15, 23, 42, 0.15);
+
+    z-index: 1000;
+
+    /* ONLY ADD THESE */
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Sidebar Logo / Title */
+
+.sidebar::before {
+    content: "SKILL GAP";
+    display: block;
+
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+    color: #ffffff;
+}
+
+
+/* Sidebar Links */
+
+.sidebar a {
+    display: flex;
+    align-items: center;
+
+    padding: 14px 18px;
+    margin-bottom: 8px;
+
+    border-radius: 10px;
+
+    color: #cbd5e1;
+
+    font-size: 15px;
+    font-weight: 600;
+
+    transition: all 0.3s ease;
+}
+
+
+/* Hover */
+
+.sidebar a:hover {
+    background: rgba(255, 255, 255, 0.10);
+    color: #ffffff;
+
+    transform: translateX(5px);
+}
+
+
+/* Active */
+
+.sidebar a.active {
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    color: #ffffff;
+
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.35);
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.main {
+    margin-left: 250px;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SECTIONS
+   ========================================================= */
+
+section {
+    min-height: 100vh;
+
+    padding: 50px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* Container */
+
+section .container {
+    width: 100%;
+    max-width: 1100px;
+
+    background: #ffffff;
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 10px 40px rgba(15, 23, 42, 0.08);
+
+    border: 1px solid #e2e8f0;
+
+    overflow-y: auto;
+}
+
+
+/* =========================================================
+   HERO / HOME
+   ========================================================= */
+
+#home {
+    background:
+        radial-gradient(
+            circle at top right,
+            rgba(99, 102, 241, 0.35),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #0f172a,
+            #1e1b4b,
+            #312e81
+        );
+
+    color: #ffffff;
+
+    text-align: center;
+}
+
+
+#home h1 {
+    font-size: 58px;
+    font-weight: 800;
+
+    color: #39315f;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 20px;
+
+    text-shadow:
+        0 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+#home p {
+    max-width: 700px;
+
+    margin: 0 auto 35px;
+
+    font-size: 19px;
+
+    line-height: 1.8;
+
+    color: #234670;
+}
+
+
+/* =========================================================
+   HEADINGS
+   ========================================================= */
+
+section h2 {
+    font-size: 32px;
+
+    color: #0f172a;
+
+    text-align: center;
+
+    margin-bottom: 25px;
+}
+
+section h3 {
+    color: #334155;
+}
+
+
+/* =========================================================
+   CARDS
+   ========================================================= */
+
+.card {
+    background: #ffffff;
+
+    padding: 25px;
+
+    border-radius: 16px;
+
+    margin: 18px 0;
+
+    text-align: center;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 5px 20px rgba(15, 23, 42, 0.06);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+
+/* Card Hover */
+
+.card:hover {
+    transform: translateY(-6px);
+
+    border-color: #c7d2fe;
+
+    box-shadow:
+        0 15px 35px rgba(79, 70, 229, 0.12);
+}
+
+
+.card h3 {
+    color: #1e293b;
+    margin-bottom: 10px;
+}
+
+
+.card p {
+    color: #64748b;
+}
+
+
+/* Card Links */
+
+.card a {
+    color: #4f46e5;
+
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.card a:hover {
+    color: #7c3aed;
+}
+
+
+/* =========================================================
+   ABOUT CARDS
+   ========================================================= */
+
+.about-cards {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    justify-content: center;
+
+    margin-top: 30px;
+}
+
+
+.about-cards .card {
+    min-width: 220px;
+
+    flex: 1 1 220px;
+
+    max-width: 320px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #ffffff,
+            #f8fafc
+        );
+}
+
+
+.about-cards .card:hover {
+    transform: translateY(-8px);
+}
+
+
+/* =========================================================
+   FORM ELEMENTS
+   ========================================================= */
+
+label {
+    display: block;
+
+    margin-top: 18px;
+    margin-bottom: 7px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    color: #334155;
+}
+
+
+input,
+select,
+textarea {
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin: 6px 0;
+
+    border-radius: 10px;
+
+    border: 1px solid #cbd5e1;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 15px;
+
+    outline: none;
+
+    transition:
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Focus */
+
+input:focus,
+select:focus,
+textarea:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 4px rgba(99, 102, 241, 0.12);
+}
+
+
+textarea {
+    height: 120px;
+
+    resize: vertical;
+}
+
+
+/* Placeholder */
+
+input::placeholder,
+textarea::placeholder {
+    color: #94a3b8;
+}
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
+
+button {
+    width: 100%;
+
+    padding: 13px 20px;
+
+    margin: 10px 0;
+
+    border: none;
+
+    border-radius: 10px;
+
+    font-size: 15px;
+
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease;
+}
+
+
+button:hover {
+    transform: translateY(-2px);
+
+    opacity: 0.95;
+}
+
+
+button:active {
+    transform: translateY(0);
+}
+
+
+/* Analyze */
+
+.btn-analyze {
+    background: linear-gradient(
+        135deg,
+        #10b981,
+        #059669
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(16, 185, 129, 0.25);
+}
+
+
+/* Dark */
+
+.btn-dark {
+    background: linear-gradient(
+        135deg,
+        #f59e0b,
+        #d97706
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(245, 158, 11, 0.25);
+}
+
+
+/* Download */
+
+.btn-download {
+    background: linear-gradient(
+        135deg,
+        #8b5cf6,
+        #6d28d9
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(139, 92, 246, 0.25);
+}
+
+
+/* Reset */
+
+.btn-reset {
+    background: linear-gradient(
+        135deg,
+        #ef4444,
+        #dc2626
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(239, 68, 68, 0.25);
+}
+
+
+/* Copy */
+
+.btn-copy {
+    background: linear-gradient(
+        135deg,
+        #3b82f6,
+        #2563eb
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 6px 18px rgba(59, 130, 246, 0.25);
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.tag {
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    margin: 5px;
+
+    border-radius: 30px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 3px 8px rgba(0, 0, 0, 0.08);
+}
+
+
+.tag.missing {
+    background: #ef4444;
+}
+
+
+.tag.mastered {
+    background: #10b981;
+}
+
+
+/* =========================================================
+   PROGRESS BAR
+   ========================================================= */
+
+.progress-bar {
+    width: 100%;
+
+    height: 25px;
+
+    background: #e2e8f0;
+
+    border-radius: 30px;
+
+    overflow: hidden;
+
+    margin-top: 12px;
+}
+
+
+.progress {
+    height: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: #ffffff;
+
+    background:
+        linear-gradient(
+            90deg,
+            #10b981,
+            #059669
+        );
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    transition: width 0.6s ease;
+}
+
+
+/* =========================================================
+   CHART
+   ========================================================= */
+
+#chartContainer {
+    width: 100%;
+
+    max-width: 550px;
+
+    height: 400px;
+
+    margin: 35px auto;
+}
+
+
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.footer {
+    width: 100%;
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #0f172a;
+
+    color: #cbd5e1;
+
+    text-align: center;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   DARK MODE
+   ========================================================= */
+
+.dark-mode {
+    background: #0f172a;
+
+    color: #e2e8f0;
+}
+
+
+.dark-mode .container {
+    background: #1e293b;
+
+    color: #e2e8f0;
+
+    border-color: #334155;
+}
+
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4 {
+    color: #f8fafc;
+}
+
+
+.dark-mode .card {
+    background: #273449;
+
+    color: #e2e8f0;
+
+    border-color: #475569;
+}
+
+
+.dark-mode .card h3 {
+    color: #f8fafc;
+}
+
+
+.dark-mode .card p {
+    color: #cbd5e1;
+}
+
+
+.dark-mode input,
+.dark-mode select,
+.dark-mode textarea {
+    background: #1e293b;
+
+    color: #f8fafc;
+
+    border-color: #475569;
+}
+
+
+.dark-mode label {
+    color: #e2e8f0;
+}
+
+
+.dark-mode .progress-bar {
+    background: #475569;
+}
+
+
+.dark-mode .progress {
+    background:
+        linear-gradient(
+            90deg,
+            #059669,
+            #10b981
+        );
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f5f9;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background: #94a3b8;
+
+    border-radius: 20px;
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #64748b;
+}
+
+
+/* =========================================================
+   RESPONSIVE DESIGN
+   ========================================================= */
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .sidebar {
+        width: 200px;
+    }
+
+    .main {
+        margin-left: 200px;
+    }
+
+    section {
+        padding: 30px;
+    }
+
+    section .container {
+        padding: 30px;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+}
+
+
+/* Mobile */
+
+@media (max-width: 650px) {
+
+    .sidebar {
+        position: relative;
+
+        width: 100%;
+
+        height: auto;
+
+        padding: 15px;
+    }
+
+    .sidebar::before {
+        margin-bottom: 15px;
+    }
+
+    .sidebar a {
+        justify-content: center;
+
+        padding: 11px;
+    }
+
+    .main {
+        margin-left: 0;
+    }
+
+    section {
+        min-height: auto;
+
+        padding: 20px 15px;
+    }
+
+    section .container {
+        padding: 22px;
+
+        border-radius: 14px;
+    }
+
+    #home {
+        min-height: 100vh;
+    }
+
+    #home h1 {
+        font-size: 34px;
+    }
+
+    #home p {
+        font-size: 16px;
+    }
+
+    section h2 {
+        font-size: 26px;
+    }
+
+    .about-cards {
+        flex-direction: column;
+    }
+
+    .about-cards .card {
+        max-width: 100%;
+    }
+
+    #chartContainer {
+        height: 300px;
+    }
+}
+
+
+</style>
+</head>
+<body>
+
+<!-- ===== Sidebar ===== -->
+<div class="sidebar">
+<a href="#home" class="active">Home</a>
+<a href="#resumeSection">Resume</a>
+<a href="#jobSection">Job & Level</a>
+<a href="#analyzeSection">Analyze</a>
+<a href="#roadmapSection">Roadmap</a>
+<a href="#questionsSection">Questions</a>
+<a href="#youtubeSection">Resources</a>
+<a href="#chartSection">Chart</a>
+<a href="#aiSection">AI</a>
+<a href="#downloadSection">Download</a>
+<a href="#settingsSection">Settings</a>
+<a href="#aboutSection">About</a>
+</div>
+
+<!-- ===== Main ===== -->
+<div class="main">
+
+<!-- HOME HERO -->
+<section id="home">
+  <div class="container" style="height:100%; display:flex; flex-direction:column; justify-content:center; align-items:center;">
+    <h1>🚀 Job Skill Gap Analyzer</h1>
+    <p>Upload your resume📄, analyze your skills📊, and get a learning roadmap🗺️.</p>
+    <div>
+      <a href="#resumeSection" style="background:#253857; color:white; font-weight:bold; padding:15px 30px; border-radius:10px; margin-right:15px; box-shadow:0 5px 15px rgba(0,0,0,0.2);">Get Started</a>
+      <a href="#aboutSection" style="background:#253857; color:white; font-weight:bold; padding:15px 30px; border-radius:10px; box-shadow:0 5px 15px rgba(0,0,0,0.15);">About</a>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME UPLOAD -->
+<section id="resumeSection">
+<div class="container">
+<h2>Upload Resume📄</h2>
+<label>Your Name:</label><input type="text" id="name">
+<label>Upload Resume (TXT, PDF, DOCX):</label>
+<input type="file" id="resume" accept=".txt,.pdf,.docx">
+<div id="resumePreview" class="card hidden"></div>
+</div>
+</section>
+
+<!-- JOB ROLE & LEVEL -->
+<section id="jobSection">
+<div class="container">
+<h2>Job Role👨‍💻 & Skill Level📈</h2>
+<label>Select Job Role:</label>
+<select id="job"></select>
+<label>Your Skill Level:</label>
+<select id="level">
+<option>Beginner</option>
+<option>Intermediate</option>
+<option>Advanced</option>
+</select>
+</div>
+</section>
+
+<!-- ANALYZE -->
+<section id="analyzeSection">
+<div class="container">
+<h2>🕵️‍♂️Analyze Skills🔍</h2>
+<button class="btn-analyze" id="analyzeBtn">Analyze Skills</button>
+<div id="result"></div>
+</div>
+</section>
+
+<!-- ROADMAP -->
+<section id="roadmapSection">
+<div class="container">
+<h2>Learning Roadmap🗺️</h2>
+<div id="roadmapContent"></div>
+</div>
+</section>
+
+<!-- INTERVIEW QUESTIONS -->
+<section id="questionsSection">
+<div class="container">
+<h2>Important Interview Questions📝</h2>
+<div id="questionsContent"></div>
+</div>
+</section>
+
+<!-- YOUTUBE RESOURCES -->
+<section id="youtubeSection">
+<div class="container">
+<h2>Recommended YouTube Channels🔗📱</h2>
+<div id="youtubeContent"></div>
+</div>
+</section>
+
+<!-- SKILL CHART -->
+<section id="chartSection">
+<div class="container">
+<h2>Skill Match Chart😎</h2>
+<div id="chartContainer"><canvas id="matchChart"></canvas></div>
+</div>
+</section>
+
+<!-- AI SUGGESTIONS -->
+<section id="aiSection">
+<div class="container">
+<h2>AI Skill Recommendations🤖</h2>
+<label>Ask AI about your resume:</label>
+<textarea id="aiQuery" placeholder="Type a question like 'What skills should I improve?'"></textarea>
+<button class="btn-analyze" id="aiBtn">Get AI Suggestions</button>
+<div id="aiResult"></div>
+</div>
+</section>
+
+<!-- DOWNLOAD / COPY / RESET -->
+<section id="downloadSection">
+<div class="container">
+<h2>Download / Copy Report</h2>
+<button class="btn-download" onclick="downloadReport()">⬇ Download Report</button>
+<button class="btn-copy" onclick="copyReport()">📋 Copy Report</button>
+<button class="btn-reset" onclick="resetAnalyzer()">🔄 Reset</button>
+</div>
+</section>
+
+<!-- SETTINGS -->
+<section id="settingsSection">
+<div class="container">
+<h2>Settings⚙️</h2>
+<button class="btn-dark" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="aboutSection">
+  <div class="container" style="height:100%;">
+    <h1 style="font-size:2.5em;margin-bottom:20px;text-align:center;">About Skill Analyzer</h1>
+    <p style="font-size:1.2em;max-width:700px;text-align:center;margin:auto;">
+      SkillAnalyzer helps you identify your job skill gaps, provides learning roadmap, interview questions, AI suggestions, and career resources.
+    </p>
+    <p style="font-size:1em;margin-top:20px;text-align:center;">© 2026 SkillAnalyzer | Made by Keerthika ❤️</p>
+
+    <div class="about-cards">
+      <div class="card">👩‍💻 Own Project<br>Keerthika ❤️ </div>
+      <div class="card">🛠 Technologies Used<br>HTML, CSS, JS, Django, AI</div>
+      <div class="card">🔗 Project Links<br>GitHub</div>
+      <div class="card">✨ Future Updates<br>AI features, Resume Parsing</div>
+      <div class="card">📚 Resources<br>Learning roadmap, videos, interview prep</div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<div class="footer">© 2026 SkillAnalyzer | Made by Keerthika❤️</div>
+
+<!-- JS Libraries -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/2.16.105/pdf.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mammoth/1.4.2/mammoth.browser.min.js"></script>
+
+<script>
+// ===== Sidebar Active Link =====
+const sidebarLinks=document.querySelectorAll(".sidebar a");
+window.addEventListener("scroll",()=>{
+  let fromTop=window.scrollY+100;
+  sidebarLinks.forEach(link=>{
+    const section=document.querySelector(link.getAttribute("href"));
+    if(section.offsetTop<=fromTop && section.offsetTop+section.offsetHeight>fromTop){
+      sidebarLinks.forEach(l=>l.classList.remove("active"));
+      link.classList.add("active");
+    }
+  });
+});
+
+// ===== Fetch Dataset =====
+let dataset={};
+fetch("{% static 'dataset.json' %}")
+.then(res=>res.json())
+.then(data=>{
+    dataset=data.jobs;
+    const jobSelect=document.getElementById("job");
+    Object.keys(dataset).forEach(job=>{
+        let option=document.createElement("option");
+        option.text=job; jobSelect.add(option);
+    });
+}).catch(err=>alert("Error loading dataset: "+err));
+
+// ===== Dark Mode =====
+function toggleDarkMode(){document.body.classList.toggle("dark-mode");}
+
+// ===== Resume Reading =====
+function readResume(file,callback){
+    if(file.name.endsWith(".txt")){const reader=new FileReader();reader.onload=e=>callback(e.target.result);reader.readAsText(file);}
+    else if(file.name.endsWith(".pdf")){const reader=new FileReader();reader.onload=async e=>{const pdf=await pdfjsLib.getDocument({data:new Uint8Array(e.target.result)}).promise;let text="";for(let i=1;i<=pdf.numPages;i++){const page=await pdf.getPage(i);const content=await page.getTextContent();text+=content.items.map(t=>t.str).join(" ")+"\n";}callback(text);};reader.readAsArrayBuffer(file);}
+    else if(file.name.endsWith(".docx")){const reader=new FileReader();reader.onload=async e=>{const result=await mammoth.extractRawText({arrayBuffer:e.target.result});callback(result.value);};reader.readAsArrayBuffer(file);}
+    else{alert("Unsupported file type!");return;}
+}
+document.getElementById("resume").addEventListener("change",function(e){
+    const file=e.target.files[0];
+    if(file){
+        readResume(file,text=>{
+            const preview=document.getElementById("resumePreview");
+            preview.innerText=text.slice(0,200)+"...";
+            preview.classList.remove("hidden");
+        });
+    }
+});
+
+// ===== Skill Matching & Chart =====
+function skillMatchPercentage(text,skills){
+  let matched=[], missing=[];
+  skills.forEach(skill=>{
+    if(text.toLowerCase().includes(skill.toLowerCase())) matched.push(skill);
+    else missing.push(skill);
+  });
+  return {matched, missing};
+}
+
+document.getElementById("analyzeBtn").addEventListener("click",function(){
+  const file=document.getElementById("resume").files[0];
+  const selectedJob=document.getElementById("job").value;
+  if(!file){alert("Upload resume");return;}
+  if(!dataset[selectedJob]){alert("Job not found");return;}
+  readResume(file,text=>{
+    const skills=dataset[selectedJob].skills;
+    const {matched, missing}=skillMatchPercentage(text,skills);
+    const percent=Math.round((matched.length/skills.length)*100);
+
+    // Result
+    const resultDiv=document.getElementById("result");
+    resultDiv.innerHTML=`<h3>Match: ${percent}%</h3>
+      <div class="progress-bar"><div class="progress" style="width:${percent}%">${percent}%</div></div>
+      <h4>Mastered Skills:</h4>${matched.map(s=>`<span class="tag mastered">${s}</span>`).join(", ")}
+      <h4>Missing Skills:</h4>${missing.map(s=>`<span class="tag missing">${s}</span>`).join(", ")}`;
+
+    // Roadmap
+    const roadmapContent=document.getElementById("roadmapContent"); roadmapContent.innerHTML=""; missing.forEach(s=>roadmapContent.innerHTML+=`<div class="card">Learn ${s}</div>`);
+
+    // Questions
+    const questionsContent=document.getElementById("questionsContent"); questionsContent.innerHTML=""; dataset[selectedJob].questions.forEach(q=>questionsContent.innerHTML+=`<div class="card">${q}</div>`);
+
+    // YouTube
+    const youtubeContent=document.getElementById("youtubeContent"); youtubeContent.innerHTML=""; dataset[selectedJob].youtube.forEach(ch=>youtubeContent.innerHTML+=`<div class="card"><a href="${ch.link}" target="_blank">${ch.skill} → ${ch.link}</a></div>`);
+
+    // Chart with skill names
+    const ctx=document.getElementById("matchChart").getContext('2d');
+    if(window.matchChartInstance) window.matchChartInstance.destroy();
+    window.matchChartInstance=new Chart(ctx,{
+      type:'doughnut',
+      data:{
+        labels:[...matched,...missing],
+        datasets:[{data:[...Array(matched.length).fill(1),...Array(missing.length).fill(1)],
+          backgroundColor:[...Array(matched.length).fill('#10b981'),...Array(missing.length).fill('#ef4444')]}]
+      },
+      options:{plugins:{legend:{position:'bottom'}, tooltip:{callbacks:{label:function(ctx){return ctx.label;}}}},responsive:true,maintainAspectRatio:false}
+    });
+  });
+});
+
+// Copy / Download / Reset
+function copyReport(){const r=document.getElementById("result");if(!r.innerText.trim()){alert("Analyze first!");return;}navigator.clipboard.writeText(r.innerText).then(()=>alert("Report copied!"));}
+function downloadReport(){const r=document.getElementById("result");if(!r.innerText.trim()){alert("Analyze first!");return;}const blob=new Blob([r.innerText],{type:'text/plain'});const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="Skill_Report.txt";a.click();}
+function resetAnalyzer(){document.getElementById("resumePreview").innerHTML="";document.getElementById("roadmapContent").innerHTML="";document.getElementById("questionsContent").innerHTML="";document.getElementById("youtubeContent").innerHTML="";if(window.matchChartInstance)window.matchChartInstance.destroy();document.getElementById("result").innerHTML="";document.getElementById("name").value="";document.getElementById("resume").value="";document.getElementById("level").selectedIndex=0;document.getElementById("job").selectedIndex=0;document.getElementById("aiQuery").value="";}
+
+// AI Suggestions
+document.getElementById("aiBtn").addEventListener("click", async function(){
+    const query=document.getElementById("aiQuery").value.trim();
+    if(!query){alert("Type something!");return;}
+    document.getElementById("aiResult").innerHTML="Thinking... 🤖";
+    try{
+        const res=await fetch("/ai/",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({message:query})});
+        const data=await res.json();
+        let reply=data.reply||data.error||"No response 😢";
+        document.getElementById("aiResult").innerHTML=`<div class="card">${reply}</div>`;
+    }catch(e){document.getElementById("aiResult").innerHTML="Error 😢 Backend issue";}
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,129 @@
+{
+  "jobs": {
+    "Software Developer": {
+      "skills": ["Java", "Python", "C#", "Git", "SQL"],
+      "questions": ["Explain OOP concepts","Difference between Java and Python","What is MVC architecture?","Explain REST APIs","What is unit testing?","Explain Git branching","Explain Agile methodology","Explain debugging","Explain data structures","Explain version control"],
+      "youtube": [{"skill":"Java","link":"https://www.youtube.com/@ProgrammingKnowledge"},{"skill":"Python","link":"https://www.youtube.com/@Coreyms"},{"skill":"Git","link":"https://www.youtube.com/@TraversyMedia"}]
+    },
+    "Web Developer": {
+      "skills": ["HTML", "CSS", "JavaScript", "React", "Angular"],
+      "questions": ["Explain CSS Box Model","Difference between inline, block, inline-block","What is event delegation?","Explain component lifecycle in React","Difference between state and props","Explain Angular architecture","What is responsive design?","Explain flexbox and grid","What is DOM?","Explain REST APIs"],
+      "youtube": [{"skill":"HTML/CSS/JS","link":"https://www.youtube.com/@CodeWithHarry"},{"skill":"React","link":"https://www.youtube.com/@NetNinja"},{"skill":"Angular","link":"https://www.youtube.com/@ProgrammingKnowledge"}]
+    },
+    "Frontend Developer": {
+      "skills": ["HTML", "CSS", "JavaScript", "React", "Vue.js"],
+      "questions": ["What is Virtual DOM?","Explain CSS Box Model","Difference between inline, block, inline-block?","What is event delegation?","Difference between state and props in React?","Explain component lifecycle in React","Hooks in React?","Explain CSS flexbox","Explain CSS grid","What is responsive design?"],
+      "youtube": [{"skill":"HTML","link":"https://www.youtube.com/@CodeWithHarry"},{"skill":"CSS","link":"https://www.youtube.com/@KevinPowell"},{"skill":"JS","link":"https://www.youtube.com/@AkshaySaini"},{"skill":"React","link":"https://www.youtube.com/@NetNinja"}]
+    },
+    "Backend Developer": {
+      "skills": ["Node.js", "Python", "Java", "SQL", "REST APIs"],
+      "questions": ["What is REST API?","Explain middleware in Node.js","SQL vs NoSQL?","JWT?","Asynchronous programming?","Express routing?","Error handling in Node?","Database indexing?","Transactions?","Authentication vs Authorization?"],
+      "youtube": [{"skill":"Node.js","link":"https://www.youtube.com/@Telusko"},{"skill":"SQL","link":"https://www.youtube.com/@programmingwithmosh"},{"skill":"Python","link":"https://www.youtube.com/@Coreyms"}]
+    },
+    "Full Stack Developer": {
+      "skills": ["HTML", "CSS", "JavaScript", "Node.js", "SQL","django"],
+      "questions": ["Explain MVC architecture","How frontend communicates with backend?","What is CRUD operation?","Explain authentication vs authorization?","Explain deployment process","Explain REST APIs","Explain database design","Explain frontend routing","What is state management in React","Explain async/await"],
+      "youtube": [{"skill":"React","link":"https://www.youtube.com/@NetNinja"},{"skill":"Node.js","link":"https://www.youtube.com/@Telusko"},{"skill":"SQL","link":"https://www.youtube.com/@programmingwithmosh"}]
+    },
+    "Mobile App Developer": {
+      "skills": ["Flutter", "React Native", "Java", "Swift"],
+      "questions": ["Explain Flutter architecture","Difference between Flutter and React Native","Explain state management in Flutter","Explain widget lifecycle","How to handle push notifications","Explain REST APIs in mobile apps","Explain Firebase integration","Explain UI/UX best practices","Explain debugging techniques","Explain networking in mobile apps"],
+      "youtube": [{"skill":"Flutter","link":"https://www.youtube.com/@TheNetNinja"},{"skill":"React Native","link":"https://www.youtube.com/@Academind"}]
+    },
+    "DevOps Engineer": {
+      "skills": ["Docker", "Kubernetes", "Jenkins", "AWS"],
+      "questions": ["What is CI/CD?","Explain Docker and Kubernetes","What is Terraform?","Explain monitoring tools","Explain Linux commands","Explain scripting for automation","What is load balancing?","Explain scaling strategies","Explain logging","Explain containerization"],
+      "youtube": [{"skill":"Docker","link":"https://www.youtube.com/@TechWorldwithNana"},{"skill":"Kubernetes","link":"https://www.youtube.com/@TechWorldwithNana"},{"skill":"Jenkins","link":"https://www.youtube.com/@AutomationStepbyStep"}]
+    },
+    "Cloud Engineer": {
+      "skills": ["AWS", "Azure", "GCP", "Cloud Security"],
+      "questions": ["Explain AWS vs Azure vs GCP","Explain cloud security basics","What is serverless computing?","Explain cloud infrastructure design","Explain networking in cloud","Explain Terraform basics","Explain Docker and Kubernetes in cloud","Explain CI/CD pipelines","Explain automation in cloud","Explain scaling strategies"],
+      "youtube": [{"skill":"AWS","link":"https://www.youtube.com/@AWS"},{"skill":"Azure","link":"https://www.youtube.com/@Azure"},{"skill":"GCP","link":"https://www.youtube.com/@GoogleCloudPlatform"}]
+    },
+    "Data Analyst": {
+      "skills": ["Excel", "SQL", "Python", "Tableau", "Power BI"],
+      "questions": ["What is data cleaning?","Difference between INNER JOIN and LEFT JOIN?","What is normalization?","What is Power BI?","Explain Python libraries for data analysis","What are pivot tables?","Explain dashboards","Difference between data visualization and reporting","Explain ETL process","What is SQL aggregation?"],
+      "youtube": [{"skill":"Excel","link":"https://www.youtube.com/@LeilaGharani"},{"skill":"SQL","link":"https://www.youtube.com/@programmingwithmosh"},{"skill":"Python","link":"https://www.youtube.com/@Coreyms"},{"skill":"Power BI","link":"https://www.youtube.com/@GuyinaCube"}]
+    },
+    "Data Scientist": {
+      "skills": ["Python", "R", "SQL", "Machine Learning", "AI"],
+      "questions": ["Explain supervised vs unsupervised learning","What is overfitting and how to prevent it?","Explain confusion matrix","Difference between classification and regression","Explain feature scaling","Difference between bagging and boosting","Explain PCA","What is cross-validation?","Explain decision trees","Explain random forest"],
+      "youtube": [{"skill":"Python","link":"https://www.youtube.com/@Coreyms"},{"skill":"Machine Learning","link":"https://www.youtube.com/@krishnaik06"},{"skill":"Deep Learning","link":"https://www.youtube.com/@DeepLearningAI"},{"skill":"NLP","link":"https://www.youtube.com/@DataScienceDojo"}]
+    },
+    "Machine Learning Engineer": {
+      "skills": ["Python", "TensorFlow", "PyTorch", "AI models"],
+      "questions": ["Explain supervised learning","Explain neural networks","Explain backpropagation","What is gradient descent?","Explain overfitting","Explain underfitting","Explain hyperparameter tuning","Explain cross-validation","Explain feature engineering","Explain model evaluation metrics"],
+      "youtube": [{"skill":"Python","link":"https://www.youtube.com/@Coreyms"},{"skill":"TensorFlow","link":"https://www.youtube.com/@TensorFlow"},{"skill":"PyTorch","link":"https://www.youtube.com/@PyTorch"}]
+    },
+    "Database Administrator": {
+      "skills": ["SQL", "Oracle", "MySQL", "PostgreSQL"],
+      "questions": ["Explain database normalization","Difference between SQL and NoSQL","Explain indexing","Explain transactions","Explain database backup and recovery","Explain database tuning","Explain stored procedures","Explain joins in SQL","Explain ACID properties","Explain database security"],
+      "youtube": [{"skill":"SQL","link":"https://www.youtube.com/@programmingwithmosh"},{"skill":"Oracle","link":"https://www.youtube.com/@OracleLearning"},{"skill":"MySQL","link":"https://www.youtube.com/@TheNetNinja"}]
+    },
+    "Network Engineer": {
+      "skills": ["Cisco", "Networking Protocols", "Firewalls"],
+      "questions": ["Explain OSI model","What is subnetting?","Explain TCP/IP protocol","Explain VLANs","Explain routing protocols","Explain firewall configuration","Explain NAT","Explain network troubleshooting","Explain VPN","Explain QoS"],
+      "youtube": [{"skill":"Cisco","link":"https://www.youtube.com/@Cisco"},{"skill":"Networking","link":"https://www.youtube.com/@NetworkChuck"}]
+    },
+    "Cybersecurity Analyst": {
+      "skills": ["Ethical Hacking", "Firewalls", "SIEM", "Python"],
+      "questions": ["Explain penetration testing","What is malware?","Explain SIEM","Explain vulnerability assessment","Explain network security","Explain threat modeling","Explain intrusion detection systems","Explain incident response","Explain cryptography","Explain access control"],
+      "youtube": [{"skill":"Ethical Hacking","link":"https://www.youtube.com/@Hackersploit"},{"skill":"Python","link":"https://www.youtube.com/@Coreyms"}]
+    },
+    "Systems Administrator": {
+      "skills": ["Linux", "Windows Server", "Bash", "Powershell"],
+      "questions": ["Explain user management","Explain file permissions","Explain system monitoring","Explain shell scripting","Explain service management","Explain backup strategies","Explain patch management","Explain security hardening","Explain network configuration","Explain automation using scripts"],
+      "youtube": [{"skill":"Linux","link":"https://www.youtube.com/@LearnLinuxTV"},{"skill":"Windows Server","link":"https://www.youtube.com/@ITProTV"}]
+    },
+    "QA Engineer / Tester": {
+      "skills": ["Selenium", "Manual Testing", "JIRA", "Test Cases"],
+      "questions": ["Explain Selenium WebDriver","Difference between manual and automated testing","Explain test case design","Explain test plan","Explain regression testing","Explain functional testing","Explain performance testing","Explain bug lifecycle","Explain QA metrics","Explain exploratory testing"],
+      "youtube": [{"skill":"Selenium","link":"https://www.youtube.com/@AutomationStepbyStep"},{"skill":"JIRA","link":"https://www.youtube.com/@Atlassian"}]
+    },
+    "UI/UX Designer": {
+      "skills": ["Figma", "Adobe XD", "Sketch", "User Research"],
+      "questions": ["Explain design principles","What is wireframing?","Explain prototyping","Explain user personas","Explain usability testing","Explain color theory","Explain typography","Explain interaction design","Explain responsive UI design","Explain design systems"],
+      "youtube": [{"skill":"Figma","link":"https://www.youtube.com/@FluxAcademy"},{"skill":"Adobe XD","link":"https://www.youtube.com/@BringYourOwnLaptop"}]
+    },
+    "IT Support Specialist": {
+      "skills": ["Troubleshooting", "Networking", "Windows", "Linux"],
+      "questions": ["Explain troubleshooting steps","Explain network troubleshooting","Explain Windows OS management","Explain Linux OS management","Explain printer configuration","Explain hardware diagnostics","Explain software installation","Explain user support","Explain ticketing systems","Explain IT security basics"],
+      "youtube": [{"skill":"Windows","link":"https://www.youtube.com/@ITProTV"},{"skill":"Linux","link":"https://www.youtube.com/@LearnLinuxTV"}]
+    },
+    "Cloud Architect": {
+      "skills": ["AWS", "Azure", "Cloud Security", "DevOps"],
+      "questions": ["Explain cloud architecture","Explain AWS services","Explain Azure services","Explain security best practices","Explain cost optimization","Explain serverless computing","Explain CI/CD in cloud","Explain monitoring in cloud","Explain disaster recovery","Explain cloud design patterns"],
+      "youtube": [{"skill":"AWS","link":"https://www.youtube.com/@AWS"},{"skill":"Azure","link":"https://www.youtube.com/@Azure"}]
+    },
+    "Business Analyst": {
+      "skills": ["SQL", "Excel", "Requirement Gathering"],
+      "questions": ["Explain requirement gathering techniques","What is SQL?","Explain Excel formulas","Explain data modeling","Explain gap analysis","Explain process mapping","Explain stakeholder analysis","Explain business process documentation","Explain SWOT analysis","Explain reporting metrics"],
+      "youtube": [{"skill":"SQL","link":"https://www.youtube.com/@programmingwithmosh"},{"skill":"Excel","link":"https://www.youtube.com/@LeilaGharani"}]
+    },
+    "AI Engineer": {
+      "skills": ["Python", "Deep Learning", "NLP", "Computer Vision"],
+      "questions": ["Explain deep learning basics","Explain CNN and RNN","What is NLP?","Explain computer vision","Explain TensorFlow basics","Explain PyTorch basics","Explain AI pipelines","Explain supervised learning","Explain unsupervised learning","Explain reinforcement learning"],
+      "youtube": [{"skill":"Python","link":"https://www.youtube.com/@Coreyms"},{"skill":"Deep Learning","link":"https://www.youtube.com/@DeepLearningAI"},{"skill":"NLP","link":"https://www.youtube.com/@DataScienceDojo"}]
+    },
+    "Embedded Systems Engineer": {
+      "skills": ["C/C++", "Microcontrollers", "IoT"],
+      "questions": ["Explain microcontroller architecture","Explain embedded C basics","Explain IoT protocols","Explain sensors and actuators","Explain RTOS basics","Explain hardware interfacing","Explain interrupts","Explain memory management","Explain communication protocols","Explain low-power design"],
+      "youtube": [{"skill":"C/C++","link":"https://www.youtube.com/@TheNetNinja"},{"skill":"IoT","link":"https://www.youtube.com/@edureka"}]
+    },
+    "Blockchain Developer": {
+      "skills": ["Solidity", "Ethereum", "Smart Contracts"],
+      "questions": ["Explain blockchain basics","Explain Ethereum architecture","What is a smart contract?","Explain consensus mechanisms","Explain blockchain security","Explain token standards (ERC20, ERC721)","Explain dApps","Explain gas fees","Explain blockchain networks","Explain decentralized storage"],
+      "youtube": [{"skill":"Solidity","link":"https://www.youtube.com/@DappUniversity"},{"skill":"Ethereum","link":"https://www.youtube.com/@EatTheBlocks"}]
+    },
+    "IT Project Manager": {
+      "skills": ["Agile", "Scrum", "Jira", "Risk Management"],
+      "questions": ["Explain Agile methodology","What is Scrum?","Explain Jira usage","Explain risk management","Explain project lifecycle","Explain stakeholder management","Explain project planning","Explain task prioritization","Explain resource management","Explain project metrics"],
+      "youtube": [{"skill":"Agile","link":"https://www.youtube.com/@ProjectManagementInstitute"},{"skill":"Scrum","link":"https://www.youtube.com/@ScrumAlliance"}]
+    },
+    "Product Manager (Tech)": {
+      "skills": ["Product Roadmap", "Analytics", "Agile"],
+      "questions": ["Explain product roadmap creation","Explain analytics metrics","Explain Agile in product management","Explain stakeholder management","Explain market research","Explain product lifecycle","Explain MVP","Explain feature prioritization","Explain user feedback analysis","Explain KPIs for products"],
+      "youtube": [{"skill":"Product Management","link":"https://www.youtube.com/@ProductSchool"},{"skill":"Analytics","link":"https://www.youtube.com/@DataDriven"}]
+    }
+  }
+}
