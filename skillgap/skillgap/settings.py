@@ -122,5 +122,14 @@ USE_TZ = True
 # STATIC_URL = 'static/'
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [BASE_DIR / "analyzer/static"]
+# STATIC_URL = '/static/'
+# STATICFILES_DIRS = [BASE_DIR / "static"]  # if using custom static folder
+
+
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "static"]  # if using custom static folder
+
+STATICFILES_DIRS = [
+    BASE_DIR / "analyzer" / "static"
+]
+
+STATIC_ROOT = BASE_DIR / "staticfiles"
